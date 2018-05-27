@@ -175,6 +175,10 @@ button{
     }
 }
 ////////Comments
+.comments-window{
+    display: none;
+    //display: block;
+}
 .comments-top{
     height: 100px;
     background: url(../img/profile-photo.jpg)no-repeat;
@@ -413,11 +417,11 @@ button{
 		-ms-animation-name:ball_moveG;
 		-webkit-animation-name:ball_moveG;
 		-moz-animation-name:ball_moveG;
-	animation-duration:1.5s;
-		-o-animation-duration:1.5s;
-		-ms-animation-duration:1.5s;
-		-webkit-animation-duration:1.5s;
-		-moz-animation-duration:1.5s;
+	animation-duration:2.5s;
+		-o-animation-duration:2.5s;
+		-ms-animation-duration:2.5s;
+		-webkit-animation-duration:2.5s;
+		-moz-animation-duration:2.5s;
 	animation-iteration-count:infinite;
 		-o-animation-iteration-count:infinite;
 		-ms-animation-iteration-count:infinite;
@@ -432,7 +436,7 @@ button{
 }
   ///no search
   .no-search{
-      //display: none;
+      display: none;
       text-align: center;
     .text-box{
         margin: auto;
@@ -482,7 +486,7 @@ button{
 ///identified
 .identified-top{
     display: flex;
-    padding-top: 38px;
+    padding-top: 30px;
     padding-bottom: 14px;
     .top-text{
         margin: auto;
@@ -513,7 +517,7 @@ button{
     padding-right: 44px;
     button{
         margin: auto;
-        margin-top: 23px;
+        margin-top: 18px;
     }
     span{
         font-size: 16px;
@@ -524,21 +528,190 @@ button{
     }
 }
 .coincidence-box{
-    padding: 20px 15px 30px 20px;
+    padding: 13px 15px 19px 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin: auto;
     .coincidence-item{
-        padding-bottom: 5px;
+        padding-bottom: 1px;
         padding-right: 5px;
     }
 }
   
+////////subscribers
+.subscribers{
+    //display: none;
+    .subscribers-top{
+        position: fixed;
+    top: 0;
+    height: 59px;
+    width: 100%;
+    background: #f7f7f7;
+    padding-left: 19px;
+    text-align: left;
+    span{
+        display: flex;
+        margin-top: 22px;
+        font-size: 18px;
+        font-family: 'SF-UI-Display-Bold';
+        
+    }
+    }
+            .subscribers-box{
+                padding-top: 57px;
+                width: 100%;
+                .slider{
+                    //width: calc(100% - 95px);
+                    width: 100%;
+                    overflow: hidden;
+                    .slide-item{
+                        width: 100%;
+                        overflow: hidden;
+                        height: 74px ;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        padding-left: 18px;
+                        border-bottom: 1px solid #e8e8e8;
+                        .persone-img{
 
+                                width: 61px;
+                                height: 57px;    
+                                border-radius: 50%;    
+                                 background: url(../img/Subscribes1.png)no-repeat center/57px;                     
+                        }
+                        .persone-aboute{
+                             width: calc(100% - 95px);
+                              
+                            display: flex;
+                            flex-direction: column;
+                            margin-left: 8px;
+                            height: 75px ;
+                           
+                            .comments-title{
+                                display: flex;
+                                justify-content: space-between;
+                                margin-top: 14px;
+                                
+                                .number-com{
+                                    
+                                    font-size: 14px;
+                                    font-family: 'SF-UI-Display-Bold';
+                                    color: #358ed6;
+                                    line-height: 2;
+                                
+                            }
+                                .date-com{
+                                    
+                                        font-size: 12px;
+                                        font-family: 'SF-UI-Display-Regular';
+                                        color: #b6b6b6;
+                                        line-height: 2.333;
+                                      
+                                    }
+                                      
+                                
+                            }
+                            .part-com{
+                                .comment{
+                                    font-size: 14px;
+                                    font-family: 'SF-UI-Display-Regular';
+                                    line-height: 1.571;
+                                    
+                                      
+                                    // color: #b6b6b6;
+                                    // line-height: 2.333;
+                                }
+                            }
+
+                        }
+                        
+                    }
+                }
+            }
+
+
+
+}
+.slider-container{
+    display: flex;
+    overflow: hidden;
+    width: calc(100% + 109px);
+    position: relative;
+    left: 0;
+}
+.delete-btn{
+    height: 75px;
+    width: 115px;
+    border: none;
+    background: #ff3333;
+    color: rgb(255, 251, 247);
+    font-size: 12px;
+    font-family: 'SF-UI-Display-Regular';
+    line-height: 1.833;
+    position: relative;
+    float: right;
+    padding-top: 22px;
+    background: url(../img/waste-bin.svg)no-repeat 50% 33%/16px, #ff3333;
+    outline: none;
+}
+
+   
+
+
+
+
+.cont{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 300px;
+}
+
+
+
+
+
+/////////////no-subscribers
+.no-subscribers{
+    display: none;
+    .no-subscribers-box{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        text-align: center;
+        padding: 114px 50px 0 50px;
+        .no-subscribers-img{
+            img{
+                width: 88px;
+                margin-bottom: 32px;
+            }
+        }
+    }
+    .title{
+        font-size: 24px;
+        font-family: 'SF-UI-Display-Regular';
+        color: rgb(0, 0, 0);
+        line-height: 1.333;
+        margin-bottom: 15px;
+    }
+    .text{
+        font-size: 16px;
+        font-family: 'SF-UI-Display-Regular';
+        color: rgba(0, 0, 0, 0.6);
+        line-height: 1.563;
+    }
+    .arrow-down{
+        margin-top: 136px;
+        height: 24px;
+        background: url(../img/down-arrow-grey.svg)no-repeat center/24px;
+    }
+}
 
   
 
+  
 
 
 
